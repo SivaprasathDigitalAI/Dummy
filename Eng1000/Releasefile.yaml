@@ -1,6 +1,6 @@
 # Exported from:        http://LAPTOP-9C20LTLG:5516/
 # Release version:      22.1.0-SNAPSHOT
-# Date created:         Wed Feb 16 14:51:46 IST 2022
+# Date created:         Wed Feb 16 14:52:21 IST 2022
 
 ---
 apiVersion: xl-release/v1
@@ -14,6 +14,14 @@ spec:
   - phase: New Phase
     tasks:
     - name: MT
+      type: xlrelease.Task
+  riskProfile: Default risk profile
+- template: T2
+  scheduledStartDate: 2022-02-16T09:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: M@
       type: xlrelease.Task
   riskProfile: Default risk profile
 - notifications:

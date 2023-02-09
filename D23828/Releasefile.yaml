@@ -1,6 +1,6 @@
 # Exported from:        http://LAPTOP-9C20LTLG:5516/
 # Release version:      22.0.0-20211220-123974
-# Date created:         Thu Feb 09 13:03:41 IST 2023
+# Date created:         Thu Feb 09 13:30:45 IST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -26,11 +26,16 @@ spec:
   phases:
   - phase: New Phase
     tasks:
+    - name: RT
+      type: delivery.RegisterTrackedItems
+      trackedItems:
+      - T1
+      delivery: D-23828/F1
     - name: T
       type: delivery.MarkTrackedItems
       precedingStages: true
       stage: New Stage
-      delivery: D-23828/D1
+      delivery: D-23828/F1
     - name: CD
       type: delivery.CreateDelivery
       ^title: EEEEE

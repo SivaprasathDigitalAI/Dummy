@@ -1,6 +1,6 @@
 # Exported from:        http://LAPTOP-9C20LTLG:5516/
 # Release version:      22.0.0-20211220-123974
-# Date created:         Thu Feb 09 12:47:11 IST 2023
+# Date created:         Thu Feb 09 12:47:34 IST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -11,7 +11,6 @@ spec:
 - pattern: Pattern1
   description: Test D-23828
   stages:
-  - stage: New Stage
   - stage: New Stage 2
   - stage: New Stage 3
   autoComplete: true

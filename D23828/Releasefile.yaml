@@ -1,0 +1,24 @@
+# Exported from:        http://LAPTOP-9C20LTLG:5516/
+# Release version:      22.0.0-20211220-123974
+# Date created:         Thu Feb 09 12:47:11 IST 2023
+
+---
+apiVersion: xl-release/v1
+kind: Templates
+metadata:
+  home: D-23828
+spec:
+- pattern: Pattern1
+  description: Test D-23828
+  stages:
+  - stage: New Stage
+  - stage: New Stage 2
+  - stage: New Stage 3
+  autoComplete: true
+- template: T1
+  scheduledStartDate: 2023-02-09T09:00:00+05:30
+  phases:
+  - phase: New Phase
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_T1_scriptUserPassword"
+  riskProfile: Default risk profile

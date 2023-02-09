@@ -1,6 +1,6 @@
 # Exported from:        http://LAPTOP-9C20LTLG:5516/
 # Release version:      22.0.0-20211220-123974
-# Date created:         Thu Feb 09 15:58:33 IST 2023
+# Date created:         Thu Feb 09 16:46:03 IST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -51,6 +51,8 @@ spec:
       delivery: "${deliveryId}"
     - name: FD
       type: delivery.FindDelivery
+    - name: GT
+      type: xlrelease.GateTask
     color: '#3d6c9e'
   variables:
   - type: xlrelease.StringVariable
@@ -61,4 +63,12 @@ spec:
     key: stageId
   scriptUsername: admin
   scriptUserPassword: !value "xlrelease_Release_T1_scriptUserPassword"
+  riskProfile: Default risk profile
+- template: T2
+  scheduledStartDate: 2023-02-09T09:00:00+05:30
+  phases:
+  - phase: New Phase
+    tasks:
+    - name: MT
+      type: xlrelease.Task
   riskProfile: Default risk profile

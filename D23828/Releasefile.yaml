@@ -1,6 +1,6 @@
 # Exported from:        http://LAPTOP-9C20LTLG:5516/
 # Release version:      22.0.0-20211220-123974
-# Date created:         Fri Feb 10 10:34:51 IST 2023
+# Date created:         Fri Feb 10 10:36:49 IST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -15,11 +15,6 @@ spec:
   - stage: New Stage 2
   - stage: New Stage 3
   autoComplete: true
-- pattern: Reference_Pattern
-  stages:
-  - stage: New Stage
-  - stage: New Stage (1)
-  autoComplete: true
 - template: T1
   scheduledStartDate: 2023-02-09T09:00:00+05:30
   dueDate: 2023-02-09T10:00:00+05:30
@@ -29,7 +24,7 @@ spec:
     - name: T
       type: delivery.MarkTrackedItems
       precedingStages: true
-      pattern: ./Pattern1
+      pattern: Deliveries/Deliveryb3af55be4b5744a18016db8323c055d0
     - name: CD
       type: delivery.CreateDelivery
       ^title: EEEEE

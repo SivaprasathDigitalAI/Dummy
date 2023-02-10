@@ -1,6 +1,6 @@
 # Exported from:        http://LAPTOP-9C20LTLG:5516/
 # Release version:      22.0.0-20211220-123974
-# Date created:         Fri Feb 10 08:01:21 IST 2023
+# Date created:         Fri Feb 10 08:43:54 IST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -56,7 +56,7 @@ spec:
       type: xlrelease.CreateReleaseTask
       newReleaseTitle: R!
       riskProfile: Default risk profile
-      template: Samples & Tutorials/Configure Release
+      template: Applications/FolderSamplesAndTutorials/ReleaseTemplate_configure
       folder: ./
     color: '#3d6c9e'
   variables:
@@ -76,4 +76,11 @@ spec:
     tasks:
     - name: MT
       type: xlrelease.Task
+  riskProfile: Default risk profile
+- template: T3
+  scheduledStartDate: 2023-02-10T09:00:00+05:30
+  phases:
+  - phase: New Phase
+  scriptUsername: admin
+  scriptUserPassword: !value "xlrelease_Release_T3_scriptUserPassword"
   riskProfile: Default risk profile

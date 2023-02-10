@@ -1,6 +1,6 @@
 # Exported from:        http://LAPTOP-9C20LTLG:5516/
 # Release version:      22.0.0-20211220-123974
-# Date created:         Thu Feb 09 16:46:03 IST 2023
+# Date created:         Fri Feb 10 08:01:21 IST 2023
 
 ---
 apiVersion: xl-release/v1
@@ -30,7 +30,6 @@ spec:
       type: delivery.RegisterTrackedItems
       trackedItems:
       - T1
-      delivery: D-23828/F1
     - name: T
       type: delivery.MarkTrackedItems
       precedingStages: true
@@ -53,6 +52,12 @@ spec:
       type: delivery.FindDelivery
     - name: GT
       type: xlrelease.GateTask
+    - name: CRT
+      type: xlrelease.CreateReleaseTask
+      newReleaseTitle: R!
+      riskProfile: Default risk profile
+      template: Samples & Tutorials/Configure Release
+      folder: ./
     color: '#3d6c9e'
   variables:
   - type: xlrelease.StringVariable
